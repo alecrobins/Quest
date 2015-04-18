@@ -17,7 +17,9 @@
   </div>
   <ul class="nav navbar-nav">
     <li data-match-route="/$"><a href="/">Home</a></li>
-    <li data-match-route="/add"><a href="/add">Add</a></li>
+		<li data-match-route="/world"><a href="/world">World</a></li>
+		<li data-match-route="/create"><a href="/create">Editor</a></li>
+    <li data-match-route="/profile"><a href="/profile">Profile</a></li>
   </ul>
   <ul class="nav navbar-nav pull-right" ng-if="!currentUser">
     <li data-match-route="/login"><a href="/login">Login</a></li>
@@ -42,7 +44,21 @@
 <script src="./vendor/bower_components/moment/min/moment.min.js"></script>
 
 <!-- Angular JS Scripts -->
-<script src="javascripts/app.js"></script>
+<script src="./javascripts/app.js"></script>
+
+<!-- Controllers -->
+<script src="./javascripts/controllers/MainCtrl.js"></script>
+<script src="./javascripts/controllers/EditorCtrl.js"></script>
+<script src="./javascripts/controllers/LoginCtrl.js"></script>
+<script src="./javascripts/controllers/PostCtrl.js"></script>
+<script src="./javascripts/controllers/ProfileCtrl.js"></script>
+<script src="./javascripts/controllers/SearchCtrl.js"></script>
+<script src="./javascripts/controllers/SignupCtrl.js"></script>
+<script src="./javascripts/controllers/WorldCtrl.js"></script>
+
+<!--Services -->
+<script src="./javascripts/services/postService.js"></script>
+
 
 </body>
 </html>
