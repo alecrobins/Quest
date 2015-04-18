@@ -43,6 +43,9 @@ angular.module('app', ['ngCookies', 'ngResource', 'ngMessages', 'ngRoute', 'mgcr
 	    templateUrl: 'views/signup.html',
 	    controller: 'SignupCtrl'
 	  })
+		.when('/test',{
+			tempalteUrl: 'views/test.html'
+		})
 	  .otherwise({
 	    redirectTo: '/'
 	  });
