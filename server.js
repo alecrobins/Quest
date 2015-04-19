@@ -3,60 +3,35 @@ var path = require('path');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var mysql = require('mysql');
+var async = require('async');
 
-var pool = mysql.createPool({
-    connectionLimit : 100, //important
-    host     : 'localhost',
-    user     : 'root',
-    password : 'root',
-    database : 'quest',
-    debug    :  false
-});
+var test = require('./test');
 
 var app = express();
+
+module.exports = app;
 
 app.set('port', process.env.PORT || 3000);
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-function handle_database(req,res) {
+app.get("/test", test.list);
 
-    pool.getConnection(function(err,connection){
-        if (err) {
-          connection.release();
-          res.json({"code" : 100, "status" : "Error in connection database"});
-          return;
-        }
+app.post("/test", test.save);
 
-        console.log('connected as id ' + connection.threadId);
-
-        connection.query("SELECT * from user",function(err,rows){
-            connection.release();
-            if(!err) {
-                res.json(rows);
-            }
-        });
-
-        connection.on('error', function(err) {
-              res.json({"code" : 100, "status" : "Error in connection database"});
-              return;
-        });
-  });
-}
-
-app.get("/test",function(req,res){
-    handle_database(req,res);
-});
-
+// Fix problem with redirects in HTML5 mode
 app.get('*', function(req, res) {
   res.redirect('/#' + req.originalUrl);
 });
 
+
+// Start the server on port 3000
 app.listen(app.get('port'), function() {
   console.log('Express server listening on port ' + app.get('port'));
 });
