@@ -1,0 +1,18 @@
+TODO LIST
+
+- Set up the UI 
+- User login with authentication
+- Configure how images will be stored
+
+- Begin the project
+	- User login / authentication
+	- Creating a simple blog post
+	- Create more complex blog post with formatting
+		- Photos, styles
+	- Placing blog posts into seperate chapters
+	- Gathering all the blog posts
+	- Edit user posts
+	- Save a post a draft and don't show until published
+
+- Add additional
+	- Add image gallery

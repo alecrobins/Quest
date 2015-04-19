@@ -10,26 +10,22 @@
 </head>
 <body>
 
-<div class="navbar navbar-default navbar-static-top"
-     role="navigation" bs-navbar>
-  <div class="navbar-header">
-    <a class="navbar-brand" href="/">Quest</a>
-  </div>
-  <ul class="nav navbar-nav">
-    <li data-match-route="/$"><a href="/">Home</a></li>
-		<li data-match-route="/world"><a href="/world">World</a></li>
-		<li data-match-route="/create"><a href="/create">Editor</a></li>
-    <li data-match-route="/profile"><a href="/profile">Profile</a></li>
-  </ul>
-  <ul class="nav navbar-nav pull-right" ng-if="!currentUser">
-    <li data-match-route="/login"><a href="/login">Login</a></li>
-    <li data-match-route="/signup"><a href="/signup">Sign up</a></li>
-  </ul>
-  <ul class="nav navbar-nav pull-right" ng-if="currentUser">
-    <li class="navbar-text" ng-bind="currentUser.email"></li>
-    <li><a href="javascript:void(0)" ng-click="logout()">Logout</a></li>
-  </ul>
+<div class="navbar">
+  <h1>QUEST</h1>
 </div>
+
+<h1>H1 - Big Title</h1>
+<h2>H2 - Middle Sub header</h2>
+<h3>H3 - Thin third headder</h3>
+<h4>H4 - Small thick detail all caps (used for chapter, location)</h4>
+<h4 class="caps">H4 - Small thick detail all caps  (used for small heading on right home page)</h4>
+<h4 class="caps white">H5 - Small thick detail all caps read with red background (used for editor titles)</h4>
+<h5>H5 - Small thin detail</h5>
+<h5 class"red">H5 - Small thin detail that is red</h5>
+<h5 class"caps">H5 - Small thin detail that is in all caps</h5>
+
+<p class="text">Paragraph Text</p>
+<p class="text-detail">Detail text that is not a header (Travler had # of likes)</p>
 
 <div ng-view></div>
 
