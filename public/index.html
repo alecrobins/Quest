@@ -6,26 +6,57 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Quest</title>
-	<link rel="stylesheet" href="./stylesheets/styles.css" />
-</head>
+
+  <link href="./stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /></head>
+  <!--[if IE]>
+    <link href="./stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <![endif]-->
+
 <body>
 
 <div class="navbar">
-  <h1>QUEST</h1>
+  <img src="./assets/images/logo_small.png" alt="Quest logo" />
 </div>
 
+<!-- Typeography display -->
 <h1>H1 - Big Title</h1>
-<h2>H2 - Middle Sub header</h2>
-<h3>H3 - Thin third headder</h3>
-<h4>H4 - Small thick detail all caps (used for chapter, location)</h4>
-<h4 class="caps">H4 - Small thick detail all caps  (used for small heading on right home page)</h4>
-<h4 class="caps white">H5 - Small thick detail all caps read with red background (used for editor titles)</h4>
-<h5>H5 - Small thin detail</h5>
-<h5 class"red">H5 - Small thin detail that is red</h5>
-<h5 class"caps">H5 - Small thin detail that is in all caps</h5>
 
-<p class="text">Paragraph Text</p>
-<p class="text-detail">Detail text that is not a header (Travler had # of likes)</p>
+<h1 class="edit">H1 - in editor mode</h1>
+<h1 class="edit grey">H1 - in editor mode</h1>
+
+<h2>H2 - Middle Sub header</h2>
+
+<h3>H3 - Thin third headder</h3>
+
+<h4>H4 - larger thick detail</h4>
+<h4 class="red">H4 - lrager thick detail red</h4>
+
+<h5>H5 - Small thicker text used for username, locations, chapter names</h5>
+<h5 class="italics">H5 - Small thicker text used for username, locations, chapter names</h5>
+<h5 class="red">H5 - Small thicker text used for username, locations, chapter names</h5>
+<h5 class="white">H5 - Small thicker text used for username, locations, chapter names</h5>
+<h5 class="grey">H5 - Small thicker text used for username, locations, chapter names</h5>
+<h5 class="red caps">H5 - Small thicker text used for username, locations, chapter names</h5>
+<h5 class="white caps">H5 - Small thicker text used for username, locations, chapter names</h5>
+<h5 class="grey caps">H5 - Small thicker text used for username, locations, chapter names</h5>
+
+<p class="detail small">detail.small: Open sans used for smaller date and like detail </p>
+<p class="detail big">detail.big: Used for links, continue reading, and larger date </p>
+<p class="detail big red">detail.big: Used for links, continue reading, and larger date </p>
+<p class="detail big grey">detail.big: Used for links, continue reading, and larger date </p>
+<p class="detail big caps">detail.big: Used for links, continue reading, and larger date NEXT QUEST </p>
+
+<button class="tag">Tag</button>
+
+<p class="editor-tab">FORMAT</p>
+
+<p class="text article">Paragraph Text</p>
+<p class="text article editor">Paragraph Text in editor before edit</p>
+
+<p class="text home">Text displayed on non post pages</p>
+
+<p class="editor-type">Post</p>
+<p class="editor-type grey">Video</p>
 
 <div ng-view></div>
 

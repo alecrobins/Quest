@@ -1,0 +1,112 @@
+@import "compass/typography/vertical_rhythm"
+
+// Typography
+$icon-font-path: '../fonts/'
+
+$main-red: rgb(255,82,82)
+$main-grey: rgb(60,60,60)
+$light-grey: rgb(188,188,188)
+
+$font-heading: 'Open Sans', sans-serif
+$font-reading: 'Lora', serif
+
+@mixin styles()
+	&.red
+		color: $main-red
+	&.grey
+		color: $light-grey
+	&.white
+		color: white
+	&.caps
+		text-transform: uppercase
+
+h1, h2, h3, h4, h5, .detail, .tag, .editor-tab
+	font-family: $font-heading
+	color: $main-grey
+	@include styles()
+
+.text
+	font-family: $font-reading
+	@include styles()
+	// editing styles
+	&.italics
+		font-style: italic
+	&.underline
+		font-style: underline
+	&.bold
+		font-weight: bold
+
+
+// Setting up Compass Vertical Scale
+$base-font-size: 20px
+$base-line-height: 32px
+$rhythm-unit: "rem"
+$rem-with-px-fallback: false
+// Allows compass to round to  multiples of 0.5x line height
+$round-to-nearest-half-line: true
+
+// custom sizes
+$h1-fz: 48px
+$h1-edit-fz: 36px
+$h2-fz: 26px
+$h3-fz: 26px
+$h4-fz: 16px
+$h5-fz: 12px
+
+$detail-small-fz: 12px
+$detail-big-fz: 14px
+$tag-fz: 12px
+$editor-tabs-fz: 10px
+
+$text-article-fz: 20px
+$text-home-fz: 16px
+
+// Establishes baseline with Compass.
+@include establish-baseline
+
+html
+	@include adjust-leading-to(3)
+
+// Headers
+h1
+	@include adjust-font-size-to($h1-fz)
+	font-weight: 700
+	&.edit
+		@include adjust-font-size-to($h1-edit-fz)
+h2
+	@include adjust-font-size-to($h2-fz)
+	font-weight: 600
+
+h3
+	@include adjust-font-size-to($h3-fz)
+	font-weight: 300
+h4
+	@include adjust-font-size-to($h4-fz)
+	font-weight: 700
+
+h5
+	@include adjust-font-size-to($h5-fz)
+	font-weight: 700
+
+// Detail
+.detail
+	font-weight: 300
+	&.small
+		@include adjust-font-size-to($detail-small-fz)
+	&.big
+		@include adjust-font-size-to($detail-big-fz)
+
+// Tag
+.tag
+	@include adjust-font-size-to($tag-fz)
+
+// Editor tab
+.editor-tab
+	@include adjust-font-size-to($editor-tabs-fz)
+
+// Text
+.text
+	&.article
+		@include adjust-font-size-to($text-article-fz)
+	&.home
+		@include adjust-font-size-to($text-home-fz)
