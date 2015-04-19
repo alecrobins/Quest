@@ -1,0 +1,8 @@
+/* line 9, ../../sass/partials/typography.sass */
+* {
+  font-family: "Open Sans", sans-serif;
+  color: #1e1e1e;
+  margin: 0;
+  padding: 0;
+  border: none;
+}

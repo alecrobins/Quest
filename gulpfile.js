@@ -1,17 +1,25 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
-var plumber = require('gulp-plumber');
+var compass = require('gulp-compass');
+var minifyCSS = require('gulp-minify-css');
 
-
-gulp.task('sass', function() {
-  gulp.src('public/stylesheets/styles.sass')
-    .pipe(plumber())
-    .pipe(sass({indentedSyntax: true}))
-    .pipe(gulp.dest('public/stylesheets'));
+// compass
+gulp.task('compass', function() {
+    gulp.src('./public/sass/*.sass')
+        .pipe(compass({
+            config_file: './public/config.rb',
+            sass: './public/sass',
+            css: './public/stylesheets',
+        }))
+        .on('error', function(err) {
+            console.log(err)
+        })
+        .pipe(minifyCSS())
+        .pipe(gulp.dest('./public/stylesheets/'));
 });
 
-gulp.task('watch', function() {
-  gulp.watch('public/stylesheets/*.sass', ['sass']);
+// watch
+gulp.task('watch', function () {
+    gulp.watch(['./public/sass/*.sass'], ['compass']);
 });
 
-gulp.task('default', ['sass', 'watch']);
+gulp.task('default', ['compass', 'watch']);
