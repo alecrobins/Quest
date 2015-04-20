@@ -4,11 +4,9 @@
 
 $icons: sprite-map("icons/*.png")
 
-// .bold-icon
-// 	background-image: sprite-url($icons)
-// 	background-position: sprite-position($icons, bold-selected)
-// 	@include sprite-dimensions($icons, bold-selected)
-
-.bold-icon
-	background: sprite($icons, bold-selected)
-	@include sprite-dimensions($icons, bold-selected)
+// generate icons for each sprite
+@each $sprite in sprite_names($icons)
+	.#{$sprite}
+		background: sprite($icons, #{$sprite})
+		@include sprite-dimensions($icons, #{$sprite})
+		display: inline-block

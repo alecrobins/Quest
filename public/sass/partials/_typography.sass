@@ -11,19 +11,25 @@ $font-heading: 'Open Sans', sans-serif
 $font-reading: 'Lora', serif
 
 @mixin styles()
-	&.red
+	&.red, &.red a
 		color: $main-red
-	&.grey
+	&.grey, &.grey a
 		color: $light-grey
-	&.white
+	&.white, &.white a
 		color: white
-	&.caps
+	&.caps, &.caps a
 		text-transform: uppercase
 
-h1, h2, h3, h4, h5, .detail, .tag, .editor-tab
+h1, h2, h3, h4, h5, .detail, .tag, .editor-tab,
+h1 a, h2 a, h3 a, h4 a, h5 a, .detail a, .tag a, .editor-tab a
 	font-family: $font-heading
 	color: $main-grey
+	text-decoration: none
 	@include styles()
+
+h1 a, h2 a, h3 a, h4 a, h5 a, .detail a, .tag a, .editor-tab a
+	&:hover
+		text-decoration: underline
 
 .text
 	font-family: $font-reading
