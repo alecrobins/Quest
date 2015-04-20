@@ -1,0 +1,73 @@
+// Grid system for the website
+@import susy
+@import "breakpoint"
+@import compass/css3
+
+$max-width: 1024px
+
+$susy: (columns: 12, gutters: 1 / 4, debug: (image: show, color: rgba(255,0,0,0.1), output: overlay, toggle: top right,), global-box-sizing: border-box)
+
+// MIXINS
+// ================
+
+// Set whatever element to 100% width
+@mixin full-width()
+	@include container()
+	width: 100%
+
+// create a breakpoint with the max width
+@include breakpoint($max-width)
+
+// STYLES
+// ================
+
+// set the overall heights to 100%
+html, body
+	height: 100%
+
+// flush-right is used for the side bar
+.flush-right
+	@include span(4 wide of 12 last)
+	display: block
+	position: absolute
+	right: 0
+	overflow: auto
+	&.light-grey
+		background: rgb(243,243,243)
+	@include breakpoint(max-width 60em)
+		display: none
+
+// Sticky elements for the bottom and top
+.stick
+	position: fixed
+	height: auto
+	overflow: hidden
+	&.bottom
+		bottom: 0
+	&.top
+		top: 0
+
+// a container that stretches the full screen
+.container-full
+	@include container()
+
+// Base container to
+.container
+	@include container($max-width)
+	padding: 0 gutter()*2
+
+// take of 2/3's of the screen and become full screen on small devices
+.container-left
+	@include span(8 of 12)
+	@include breakpoint(max-width 60em)
+		@include full-width()
+
+.container-right
+	@include span(4 of 12 last)
+	background: orange
+	@include breakpoint((max-width 60em) (orientation portrait))
+		display: none
+
+// assign to photos that will take up 100% of their parent
+.repsonsive-image
+	width: 100%

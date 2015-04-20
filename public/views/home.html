@@ -1,3 +1,104 @@
-<h1>Home</h1>
+<!--Home Screen-->
 
-{{test}}
+
+	<div class="container-left">
+
+		<div class="container">
+
+			<div ng-repeat="p in posts" class="post-card">
+
+				<div class="post-card header">
+
+					<div class="profile">
+
+							<div class="profile-image">
+								 <img ng-src="{{p.user.profileImage.url}}" alt="Description" />
+							</div>
+
+							<div class="profile-user">
+								<h5 class="red"><a ng-click="queryUser(p.user.id)">{{p.user.username}}</a></h5>
+								<p class="detail small">{{p.date}}</p>
+							</div>
+
+					</div>
+
+					<div class="detail">
+						<h5 class="red"><a ng-click="queryLocation(p.locatoin.id)">{{p.location}}</a></h5>
+						<h5 class="red"><a ng-click="queryUserChapter(p.user.id, p.chapter.id)">{{p.chapter}}</h5>
+					</div>
+
+				</div><!-- END POST CARD HEADER -->
+
+				<div class="post-card feature-image"> <!-- back-img="{{post.feature-image.url}}" > -->
+					<img ng-src="{{p.featureImage.url}}" alt="Description" />
+
+				</div>
+
+				<div class="post-card title">
+					<h2>{{p.title}}</h2>
+				</div>
+
+				<div class="post-card text">
+					<p class="text home">
+						{{p.excerpt}}
+					</p>
+				</div>
+
+				<div class="post-card footer">
+
+					<div class="continue-reading">
+						<p class="detail big red"><a ng-href="{{p.url}}">Continue Reading</a></p>
+					</div>
+
+					<div class="likes">
+						<p class="detail small">{{p.likes}} Travlers like this </p>
+					</div>
+
+				</div>
+
+			</div><!--END POST CARD-->
+
+		</div><!-- END CONTAINER -->
+
+	</div><!-- END CONTAINER LEFT -->
+
+	<!-- Right side bar -->
+	<div class="flush-right light-grey">
+
+		<div class="full-width map">
+			<img src="./assets/images/map-filler.jpg" alt="Quest logo" class="repsonsive-image" />
+		</div>
+
+		<div class="container">
+				<div><h5 class="red caps">FEATURED PLACES</div>
+		</div>
+
+	</div>
+
+
+
+<script>
+	var test = {};
+	// TODO: move to home controller
+	$(document).ready(function() {
+	    var s = $(".flush-right");
+	    var pos = s.position();
+
+			var height = s.height();
+
+			// control the flow of
+	    $(window).scroll(function() {
+					// calculate the number of pixels moved past the height of the window
+	        var windowpos = $(window).scrollTop();
+
+	        if (height <= $(window).height() && $(window).scrollTop() >= 50){
+						s.addClass("stick top");
+					}
+					else if (windowpos >= height) {
+	            s.addClass("stick bottom");
+	        } else {
+	            s.removeClass("stick");
+	        }
+	    });
+	});
+</script>
