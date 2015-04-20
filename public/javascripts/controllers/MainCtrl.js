@@ -17,7 +17,7 @@ angular.module('app')
         date: "March 22",
         location: "Hanoi, Vietnam",
         chapter: "Test Chapter 1",
-        excerpt: "This is ia asd fa dfa sd  a sdfl;aksjdf;lajksdfla;   asldf ajsdf la sldf alsdf a;.",
+        excerpt: "This is ia asd fa dfa sd  a sdfl;aksjdf;lajksdfla;   asldf ajsdf la sldf alsdf a;. Test ata  s d fa sdnthisi a as d  asdflkasjl;znv , .zcv. zcv. adf   2 asdf asdf.",
         url: "http://www.google.com",
         likes: 998,
         featureImage: {
@@ -45,6 +45,78 @@ angular.module('app')
       }
 
     ];
+
+    $scope.locations = [
+      {
+        name: "Chicago"
+      },
+      {
+        name: "Hanoi"
+      },
+      {
+        name: "New York"
+      },
+      {
+        name: "Chicago"
+      },
+      {
+        name: "Hanoi"
+      },
+      {
+        name: "New York"
+      },
+      {
+        name: "Chicago"
+      },
+      {
+        name: "Hanoi"
+      },
+      {
+        name: "New York"
+      },{
+        name: "Chicago"
+      },
+      {
+        name: "Hanoi"
+      },
+      {
+        name: "New York"
+      }
+    ];
+
+    $scope.tags = [
+      {
+        name: "PizzaTime"
+      },
+      {
+        name: "TagHero"
+      },
+      {
+        name: "BestPlaceEver"
+      },
+      {
+        name: "WhereAmI"
+      },
+      {
+        name: "HelloWorld"
+      },
+      {
+        name: "PizzaTime"
+      },
+      {
+        name: "TagHero"
+      },
+      {
+        name: "BestPlaceEver"
+      },
+      {
+        name: "WhereAmI"
+      },
+      {
+        name: "HelloWorld"
+      },
+    ];
+
 
 
 }]);

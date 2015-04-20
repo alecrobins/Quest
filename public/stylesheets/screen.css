@@ -513,33 +513,33 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 h1, h2, h3, h4, h5, .detail, .tag, .editor-tab,
-h1 a, h2 a, h3 a, h4 a, h5 a, .detail a, .tag a, .editor-tab a {
+h1 a, h2 a, h3 a, h4 a, h5 a, .detail a, .editor-tab a {
   font-family: "Open Sans", sans-serif;
   color: #3c3c3c;
   text-decoration: none;
 }
 h1.red, h1.red a, h2.red, h2.red a, h3.red, h3.red a, h4.red, h4.red a, h5.red, h5.red a, .detail.red, .detail.red a, .tag.red, .tag.red a, .editor-tab.red, .editor-tab.red a,
 h1 a.red,
-h1 a.red a, h2 a.red, h2 a.red a, h3 a.red, h3 a.red a, h4 a.red, h4 a.red a, h5 a.red, h5 a.red a, .detail a.red, .detail a.red a, .tag a.red, .tag a.red a, .editor-tab a.red, .editor-tab a.red a {
+h1 a.red a, h2 a.red, h2 a.red a, h3 a.red, h3 a.red a, h4 a.red, h4 a.red a, h5 a.red, h5 a.red a, .detail a.red, .detail a.red a, .editor-tab a.red, .editor-tab a.red a {
   color: #ff5252;
 }
 h1.grey, h1.grey a, h2.grey, h2.grey a, h3.grey, h3.grey a, h4.grey, h4.grey a, h5.grey, h5.grey a, .detail.grey, .detail.grey a, .tag.grey, .tag.grey a, .editor-tab.grey, .editor-tab.grey a,
 h1 a.grey,
-h1 a.grey a, h2 a.grey, h2 a.grey a, h3 a.grey, h3 a.grey a, h4 a.grey, h4 a.grey a, h5 a.grey, h5 a.grey a, .detail a.grey, .detail a.grey a, .tag a.grey, .tag a.grey a, .editor-tab a.grey, .editor-tab a.grey a {
+h1 a.grey a, h2 a.grey, h2 a.grey a, h3 a.grey, h3 a.grey a, h4 a.grey, h4 a.grey a, h5 a.grey, h5 a.grey a, .detail a.grey, .detail a.grey a, .editor-tab a.grey, .editor-tab a.grey a {
   color: #bcbcbc;
 }
 h1.white, h1.white a, h2.white, h2.white a, h3.white, h3.white a, h4.white, h4.white a, h5.white, h5.white a, .detail.white, .detail.white a, .tag.white, .tag.white a, .editor-tab.white, .editor-tab.white a,
 h1 a.white,
-h1 a.white a, h2 a.white, h2 a.white a, h3 a.white, h3 a.white a, h4 a.white, h4 a.white a, h5 a.white, h5 a.white a, .detail a.white, .detail a.white a, .tag a.white, .tag a.white a, .editor-tab a.white, .editor-tab a.white a {
+h1 a.white a, h2 a.white, h2 a.white a, h3 a.white, h3 a.white a, h4 a.white, h4 a.white a, h5 a.white, h5 a.white a, .detail a.white, .detail a.white a, .editor-tab a.white, .editor-tab a.white a {
   color: white;
 }
 h1.caps, h1.caps a, h2.caps, h2.caps a, h3.caps, h3.caps a, h4.caps, h4.caps a, h5.caps, h5.caps a, .detail.caps, .detail.caps a, .tag.caps, .tag.caps a, .editor-tab.caps, .editor-tab.caps a,
 h1 a.caps,
-h1 a.caps a, h2 a.caps, h2 a.caps a, h3 a.caps, h3 a.caps a, h4 a.caps, h4 a.caps a, h5 a.caps, h5 a.caps a, .detail a.caps, .detail a.caps a, .tag a.caps, .tag a.caps a, .editor-tab a.caps, .editor-tab a.caps a {
+h1 a.caps a, h2 a.caps, h2 a.caps a, h3 a.caps, h3 a.caps a, h4 a.caps, h4 a.caps a, h5 a.caps, h5 a.caps a, .detail a.caps, .detail a.caps a, .editor-tab a.caps, .editor-tab a.caps a {
   text-transform: uppercase;
 }
 
-h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, .detail a:hover, .tag a:hover, .editor-tab a:hover {
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, .detail a:hover, .editor-tab a:hover {
   text-decoration: underline;
 }
 
@@ -610,6 +610,9 @@ h5 {
   line-height: 0.8rem;
   font-weight: 700;
 }
+h5.thin {
+  font-weight: 600;
+}
 
 .detail {
   font-weight: 300;
@@ -621,11 +624,6 @@ h5 {
 .detail.big {
   font-size: 0.7rem;
   line-height: 1.6rem;
-}
-
-.tag {
-  font-size: 0.6rem;
-  line-height: 0.8rem;
 }
 
 .editor-tab {
@@ -644,7 +642,11 @@ h5 {
 
 .navbar {
   background: #ff5252;
-  height: 50px;
+  height: 60px;
+  padding: 2px 15px;
+}
+.navbar .logo img {
+  width: 120px;
 }
 
 html, body {
@@ -768,6 +770,14 @@ head:hover ~ .container:before, head:hover ~ body .container:before {
   background-clip: content-box, border-box;
   background-position: left top;
 }
+.container.sidebar {
+  margin-bottom: 5.08475%;
+}
+.container.navbar .logo {
+  width: 15.25424%;
+  float: left;
+  margin-right: 1.69492%;
+}
 
 .container-left {
   width: 66.10169%;
@@ -824,4 +834,42 @@ head:hover ~ .container:before, head:hover ~ body .container:before {
 
 .repsonsive-image {
   width: 100%;
+}
+
+.tag-container {
+  margin-top: 10px;
+}
+.tag-container button {
+  float: left;
+  border: none;
+  padding: 5px 10px;
+  background: white;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  -moz-border-radius: 5px / 5px;
+  -webkit-border-radius: 5px 5px;
+  border-radius: 5px / 5px;
+}
+.tag-container button:hover {
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -moz-transform: scale(1.1) translate(2px);
+  -ms-transform: scale(1.1) translate(2px);
+  -webkit-transform: scale(1.1) translate(2px);
+  transform: scale(1.1) translate(2px);
+  -moz-box-shadow: rgba(128, 128, 128, 0.1) 0 0 5px;
+  -webkit-box-shadow: rgba(128, 128, 128, 0.1) 0 0 5px;
+  box-shadow: rgba(128, 128, 128, 0.1) 0 0 5px;
+  cursor: pointer;
+}
+
+.post-card {
+  max-width: 600px;
+  margin: 0 auto;
 }

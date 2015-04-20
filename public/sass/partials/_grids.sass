@@ -55,6 +55,12 @@ html, body
 .container
 	@include container($max-width)
 	padding: 0 gutter()*2
+	// sidebar margin
+	&.sidebar
+		margin-bottom: gutter() * 3
+	&.navbar
+		.logo
+			@include span(2 of 12)
 
 // take of 2/3's of the screen and become full screen on small devices
 .container-left

@@ -1,0 +1,9 @@
+@import compass/css3
+
+// animation mixins
+@mixin link-hover()
+	+transition-property(all)
+	+transition-duration(0.2s)
+	@include transform (scale(1.1) translate(2px))
+	+box-shadow(rgba(gray, 0.1) 0 0 5px)
+	cursor: pointer

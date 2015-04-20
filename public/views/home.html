@@ -27,7 +27,7 @@
 				</div><!-- END POST CARD HEADER -->
 
 				<div class="post-card feature-image"> <!-- back-img="{{post.feature-image.url}}" > -->
-					<img ng-src="{{p.featureImage.url}}" alt="Description" />
+					<img ng-src="{{p.featureImage.url}}" alt="Description" class="repsonsive-image" />
 
 				</div>
 
@@ -61,13 +61,39 @@
 
 	<!-- Right side bar -->
 	<div class="flush-right light-grey">
-		<!--TODO: ERROR WITH THE MAPPING FUNCIOTN -->
+
 		<div class="full-width">
 			<img src="./assets/images/map-filler.jpg" alt="Quest logo" class="repsonsive-image" />
 		</div>
 
-		<div class="container">
-				<div><h5 class="red caps">FEATURED PLACES</div>
+		<!-- Featured tags -->
+		<div class="container sidebar">
+				<h5 class="red caps">FEATURED LOCATIONS</h5>
+
+				<div class="tag-container">
+						<button ng-repeat="location in locations" ng-click="queryLocatoin(location.id)" class="tag">
+							<h5 class="thin">{{location.name}}</h5>
+						</button>
+				</div>
+
+		</div>
+
+		<!-- Featured tags -->
+		<div class="container sidebar">
+				<h5 class="red caps">POPULAR TAGS</h5>
+
+				<div class="tag-container">
+					<button ng-repeat="tag in tags" ng-click="queryTag(tag.id)" class="tag">
+						<h5 class="thin">#{{tag.name}}</h5>
+					</button>
+				</div>
+
+		</div>
+
+		<!-- Featured tags -->
+		<div class="container sidebar">
+				<h5 class="red caps">Top Quest</h5>
+
 		</div>
 
 	</div>
