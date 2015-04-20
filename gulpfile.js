@@ -8,6 +8,7 @@ gulp.task('compass', function() {
         .pipe(compass({
             config_file: './public/config.rb',
             sass: './public/sass',
+            image: './public/assets/images',
             css: './public/stylesheets',
         }))
         .on('error', function(err) {

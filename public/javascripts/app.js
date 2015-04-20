@@ -46,7 +46,7 @@ angular.module('app', ['ngCookies', 'ngResource', 'ngMessages', 'ngRoute', 'mgcr
 		.when('/test',{
 			tempalteUrl: 'views/test.html'
 		})
-	  .otherwise({
-	    redirectTo: '/'
-	  });
+	  // .otherwise({
+	  //   redirectTo: '/'
+	  // });
   }]);

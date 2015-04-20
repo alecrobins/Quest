@@ -56,6 +56,181 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+.icons-sprite, .icons-bold-not-selected, .icons-bold-selected, .icons-center-not-selected, .icons-center-selected, .icons-chapter-not-selected, .icons-chapter-selected, .icons-gallery-slide, .icons-gallery-tile, .icons-h1-not-selected, .icons-h1-selected, .icons-h2-not-selected, .icons-h2-selected, .icons-h3-not-selected, .icons-h3-selected, .icons-image-full-inline-not-selected, .icons-image-full-inline-selected, .icons-image-full-not-selected, .icons-image-full-selected, .icons-image-inline-not-selected, .icons-image-inline-selected, .icons-image-left-inline-not-selected, .icons-image-left-inline-selected, .icons-image-left-not-selected, .icons-image-left-selected, .icons-image-top-not-selected, .icons-image-top-selected, .icons-italic-not-selected, .icons-italic-selected, .icons-like-big-not-selected, .icons-like-big-selected, .icons-like-small-not-selected, .icons-link-not-selected, .icons-link-selected, .icons-location-not-selected, .icons-location-selected, .icons-map, .icons-quote-not-selected, .icons-quote-selected, .icons-search, .icons-share, .icons-video {
+  background-image: url('../assets/images/icons-sddc8622fd6.png');
+  background-repeat: no-repeat;
+}
+
+.icons-bold-not-selected {
+  background-position: 0 0;
+}
+
+.icons-bold-selected {
+  background-position: 0 -17px;
+}
+
+.icons-center-not-selected {
+  background-position: 0 -34px;
+}
+
+.icons-center-selected {
+  background-position: 0 -51px;
+}
+
+.icons-chapter-not-selected {
+  background-position: 0 -68px;
+}
+
+.icons-chapter-selected {
+  background-position: 0 -83px;
+}
+
+.icons-gallery-slide {
+  background-position: 0 -98px;
+}
+
+.icons-gallery-tile {
+  background-position: 0 -219px;
+}
+
+.icons-h1-not-selected {
+  background-position: 0 -340px;
+}
+
+.icons-h1-selected {
+  background-position: 0 -357px;
+}
+
+.icons-h2-not-selected {
+  background-position: 0 -374px;
+}
+
+.icons-h2-selected {
+  background-position: 0 -391px;
+}
+
+.icons-h3-not-selected {
+  background-position: 0 -408px;
+}
+
+.icons-h3-selected {
+  background-position: 0 -425px;
+}
+
+.icons-image-full-inline-not-selected {
+  background-position: 0 -442px;
+}
+
+.icons-image-full-inline-selected {
+  background-position: 0 -464px;
+}
+
+.icons-image-full-not-selected {
+  background-position: 0 -486px;
+}
+
+.icons-image-full-selected {
+  background-position: 0 -508px;
+}
+
+.icons-image-inline-not-selected {
+  background-position: 0 -530px;
+}
+
+.icons-image-inline-selected {
+  background-position: 0 -552px;
+}
+
+.icons-image-left-inline-not-selected {
+  background-position: 0 -574px;
+}
+
+.icons-image-left-inline-selected {
+  background-position: 0 -596px;
+}
+
+.icons-image-left-not-selected {
+  background-position: 0 -618px;
+}
+
+.icons-image-left-selected {
+  background-position: 0 -640px;
+}
+
+.icons-image-top-not-selected {
+  background-position: 0 -662px;
+}
+
+.icons-image-top-selected {
+  background-position: 0 -684px;
+}
+
+.icons-italic-not-selected {
+  background-position: 0 -706px;
+}
+
+.icons-italic-selected {
+  background-position: 0 -723px;
+}
+
+.icons-like-big-not-selected {
+  background-position: 0 -740px;
+}
+
+.icons-like-big-selected {
+  background-position: 0 -764px;
+}
+
+.icons-like-small-not-selected {
+  background-position: 0 -788px;
+}
+
+.icons-link-not-selected {
+  background-position: 0 -803px;
+}
+
+.icons-link-selected {
+  background-position: 0 -820px;
+}
+
+.icons-location-not-selected {
+  background-position: 0 -837px;
+}
+
+.icons-location-selected {
+  background-position: 0 -852px;
+}
+
+.icons-map {
+  background-position: 0 -867px;
+}
+
+.icons-quote-not-selected {
+  background-position: 0 -988px;
+}
+
+.icons-quote-selected {
+  background-position: 0 -1005px;
+}
+
+.icons-search {
+  background-position: 0 -1022px;
+}
+
+.icons-share {
+  background-position: 0 -1055px;
+}
+
+.icons-video {
+  background-position: 0 -1086px;
+}
+
+.bold-icon {
+  background: url('../assets/images/icons-s42eb5f1d1d.png') 0 -17px;
+  height: 17px;
+  width: 14px;
+}
+
 h1, h2, h3, h4, h5, .detail, .tag, .editor-tab {
   font-family: "Open Sans", sans-serif;
   color: #3c3c3c;
