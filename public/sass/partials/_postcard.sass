@@ -3,3 +3,45 @@
 	// @include span(12 of 12 last)
 	max-width: 600px
 	margin: 0 auto
+	padding-bottom: 20px
+	border-bottom: solid 1px rgba(0,0,0,0.1)
+	// no border for the last child
+	&:last-child
+		border: none
+	// Post-card header
+	.post-card-header
+		margin: 20px 0
+		@include container()
+		// Profile detail in the header - top left
+		.profile
+			@include span(5 of 12)
+			.profile-image
+				display: inline-flex
+				float: left
+				margin-right: 10px
+			.profile-user
+				float: left
+		// Post-card detail (location/chapter) - top right
+		.post-card-detail
+			@include span(5 of 12 last)
+			.post-card-detail-location
+				.location-selected, h5
+					float: right
+				.location-selected
+					margin-right: 10px
+			.post-card-detail-chapter
+				clear: right
+				.chapter-selected, h5
+					float: right
+				.chapter-selected
+					margin-right: 10px
+				h5
+					max-width: 80%
+					width: auto
+					float: right
+	.post-card-text p
+		width: 100%
+
+.profile-image img
+	@include border-radius(5px, 5px)
+	vertical-align: top

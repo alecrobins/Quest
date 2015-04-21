@@ -2,7 +2,8 @@
 angular.module('app')
   .controller('MainCtrl', ['$scope', function($scope) {
 
-		$scope.test = "Hello world . . .";
+  //TEMP DB
+  //================
 
     // For testing purposes only
     $scope.posts = [
@@ -17,7 +18,7 @@ angular.module('app')
         date: "March 22",
         location: "Hanoi, Vietnam",
         chapter: "Test Chapter 1",
-        excerpt: "This is ia asd fa dfa sd  a sdfl;aksjdf;lajksdfla;   asldf ajsdf la sldf alsdf a;. Test ata  s d fa sdnthisi a as d  asdflkasjl;znv , .zcv. zcv. adf   2 asdf asdf.",
+        excerpt: "This is ia asd fa dfa sd  a sdfl;aksjdf;lajksdfla;   asldf ajsdf la sldf alsdf a;. Test ata  s d fa sdnthisi a as d  asdflkasjl;znv , .zcv. zcv. adf   2 asdf asdf. asldf ajsdf la sldf alsdf a;. Test ata  s d fa sdnthisi a as d  asdflkasjl;znv , .zcv. zcv. adf   2 asdf asdf.",
         url: "http://www.google.com",
         likes: 998,
         featureImage: {
@@ -35,7 +36,7 @@ angular.module('app')
         title: "TITLE number 2",
         date: "March 24",
         location: "Hanoi, Vietnam",
-        chapter: "Test Chapter 1",
+        chapter: "This is the best possible chapter name adj adf ad fad fa end",
         excerpt: "This is ia asd fa dfa sd  a sdfl;aksjdf;lajksdfla;   asldf ajsdf la sldf alsdf a;.",
         url: "http://www.google.com",
         likes: 998,

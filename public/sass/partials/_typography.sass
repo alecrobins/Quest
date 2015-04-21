@@ -3,6 +3,8 @@
 // Typography
 $icon-font-path: '../fonts/'
 
+// Variables
+// =================
 $main-red: rgb(255,82,82)
 $main-grey: rgb(60,60,60)
 $light-grey: rgb(188,188,188)
@@ -10,6 +12,8 @@ $light-grey: rgb(188,188,188)
 $font-heading: 'Open Sans', sans-serif
 $font-reading: 'Lora', serif
 
+// Mixins
+// ===========
 @mixin styles()
 	&.red, &.red a
 		color: $main-red
@@ -19,6 +23,9 @@ $font-reading: 'Lora', serif
 		color: white
 	&.caps, &.caps a
 		text-transform: uppercase
+
+// Styles
+// ================
 
 h1, h2, h3, h4, h5, .detail, .tag, .editor-tab,
 h1 a, h2 a, h3 a, h4 a, h5 a, .detail a, .editor-tab a
@@ -118,3 +125,9 @@ h5
 		@include adjust-font-size-to($text-article-fz)
 	&.home
 		@include adjust-font-size-to($text-home-fz)
+
+// Ellipse
+// .ellipse
+// 	white-space: nowrap
+// 	overflow: hidden
+// 	text-overflow: ellipsis
