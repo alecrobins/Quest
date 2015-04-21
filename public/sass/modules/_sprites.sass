@@ -6,7 +6,7 @@ $icons: sprite-map("icons/*.png")
 
 // generate icons for each sprite
 @each $sprite in sprite_names($icons)
-	.#{$sprite}
+	.icon-#{$sprite}
 		background: sprite($icons, #{$sprite})
 		@include sprite-dimensions($icons, #{$sprite})
 		display: block

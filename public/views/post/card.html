@@ -1,0 +1,84 @@
+<div class="post-card-header">
+	<div class="profile">
+
+			<div class="profile-image">
+				<a href="#" ng-click="queryUser(p.user.id)">
+					 <img ng-src="{{p.user.profileImage.url}}" alt="Description" />
+				</a>
+			</div>
+
+			<div class="profile-user">
+				<h5 class="red">
+					<a href="#" ng-click="queryUser(p.user.id)">
+						{{p.user.username}}
+					</a>
+				</h5>
+
+				<p class="detail small">{{p.date}}</p>
+
+			</div>
+
+	</div>
+
+	<div class="post-card-detail">
+		<!-- Post-card location -->
+		<div class="post-card-detail-location">
+			<h5 class="red">
+					<a href="#" ng-click="queryLocation(p.locatoin.id)">
+							{{p.location}}
+					</a>
+			</h5>
+
+			<span class="location-selected"></span>
+
+		</div>
+		<!-- Post-card chapter -->
+		<div class="post-card-detail-chapter">
+			<h5 class="red ellipsis">
+					<a href="#" ng-click="queryUserChapter(p.user.id, p.chapter.id)">
+							{{p.chapter}}
+					</a>
+			</h5>
+
+			<span class="chapter-selected"></span>
+
+		</div>
+	</div>
+
+</div><!-- END POST CARD HEADER -->
+
+<!-- TODO: add a function getPostContent(post) to return the relevant post information -->
+<div class="post-card-feature-image"> <!-- back-img="{{post.feature-image.url}}" > -->
+	<img ng-src="{{p.featureImage.url}}" alt="Description" class="repsonsive-image" />
+
+</div>
+
+<div class="post-card-title">
+	<h2><a href="#" ng-click="goToPost(p.id)">{{p.title}}</a></h2>
+</div>
+
+<div class="post-card-text">
+	<p class="text home"> <!-- ellipsis-paragraph"> -->
+		{{p.excerpt}}
+	</p>
+</div>
+
+<!-- Post-card footer-->
+<div class="post-card-footer">
+
+	<div class="post-card-continue-reading">
+		<p class="detail big red"><a ng-href="{{p.url}}">Continue Reading</a></p>
+	</div>
+
+	<div class="post-card-likes">
+
+		<div class="post-card-likes-content">
+			<span class="like-small-selected"></span>
+			<p class="detail small">Travlers like this </p>
+			<h5 class="red thin">{{p.likes}}</h5>
+
+		</div>
+
+	</div>
+
+</div>

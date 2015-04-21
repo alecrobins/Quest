@@ -77,3 +77,11 @@ html, body
 // assign to photos that will take up 100% of their parent
 .repsonsive-image
 	width: 100%
+
+// clear the navbar for the pageview
+.page-view
+	clear: both
+	// account for navbar
+	padding-top: 60px
+	@include breakpoint(max-width 60em)
+		padding-top: 100px

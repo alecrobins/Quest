@@ -15,6 +15,10 @@ angular.module('app', ['ngCookies', 'ngResource', 'ngMessages', 'ngRoute', 'mgcr
 	    templateUrl: 'views/post.html',
 	    controller: 'PostCtrl'
 	  })
+    .when('/editor', {
+      templateUrl: 'views/editor.html',
+			controller: 'EditorCtrl'
+    })
 		.when('/post/:pid/edit', {
 			templateUrl: 'views/editor.html',
 			controller: 'EditorCtrl'
@@ -46,7 +50,7 @@ angular.module('app', ['ngCookies', 'ngResource', 'ngMessages', 'ngRoute', 'mgcr
 		.when('/test',{
 			tempalteUrl: 'views/test.html'
 		})
-	  // .otherwise({
-	  //   redirectTo: '/'
-	  // });
+	  .otherwise({
+	    redirectTo: '/'
+	  });
   }]);

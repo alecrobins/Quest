@@ -1,0 +1,15 @@
+// Responsible for all button displays
+
+// Clear background button 
+@mixin clearButton($radius)
+	@include border-radius($radius)
+	background: rgba(255,255,255,0)
+	border: solid white 2px
+	padding: 7px
+	// animate the background
+	+transition-property(background)
+	+transition-duration(0.2s)
+	cursor: pointer
+
+@mixin clearButtonHover()
+	background: rgba(255,255,255,0.2)

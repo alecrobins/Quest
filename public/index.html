@@ -5,27 +5,60 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Quest</title>
 
-  <link href="./stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /></head>
+  <link href="./stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
   <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
   <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <!--[if IE]>
     <link href="./stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
   <![endif]-->
-
+</head>
 <body>
 
-<div class="container-full navbar">
-  <div class="logo">
-    <img src="./assets/images/logo_small.png" alt="Quest logo" />
-  </div>
-  <div class="links">
+<div class="container-full navbar" ng-controller="NavCtrl">
+    <div class="nav-logo">
+      <a href="#" ng-click="go('/')">
+        <img src="./assets/images/logo_small.png" alt="Quest logo" />
+      </a>
+    </div>
 
-  </div>
+    <div class="nav-links">
+      <ul class="nav-links-list">
+        <li ng-repeat="link in links">
+          <h5 class="caps white">
+            <a href="#" ng-click="go(link.url)">{{link.name}}</a>
+          </h5>
+        </li>
+      </ul>
+    </div>
+
+    <div class="nav-options">
+
+        <div class="nav-options-user-profile">
+          <img ng-src="{{currentUser.profileImage.url}}" alt="User profile" />
+        </div>
+
+
+        <div class="nav-options-search">
+          <button ng-click="startSearch()">
+            <span class="icon-search"></span>
+          </button>
+        </div>
+
+        <div class="nav-options-new-quest">
+          <button ng-click="newQuest()">
+            <h5 class="thin white">+ New Quest</h5>
+          </button>
+        </div>
+
+
+    </div>
+
 </div>
 
-<div ng-view></div>
+<div ng-view class="page-view"></div>
 
 <!-- Vendor Scripts-->
 <script src="./vendor/bower_components/angular/angular.js"></script>
@@ -42,6 +75,7 @@
 
 <!-- Controllers -->
 <script src="./javascripts/controllers/MainCtrl.js"></script>
+<script src="./javascripts/controllers/NavCtrl.js"></script>
 <script src="./javascripts/controllers/EditorCtrl.js"></script>
 <script src="./javascripts/controllers/LoginCtrl.js"></script>
 <script src="./javascripts/controllers/PostCtrl.js"></script>

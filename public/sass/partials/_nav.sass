@@ -4,7 +4,50 @@
 .navbar
 	background: $main-red
 	height: 60px
-	padding: 2px 15px
-	.logo
-	.logo img
-		width: 120px
+	padding: 2px 0px
+	position: absolute
+	width: 100%
+	z-index: 10
+	.nav-logo
+		margin-left: 15px
+		float: left
+		img
+			max-width: 120px
+			width: 100%
+	.nav-links
+		float: left
+		padding: 20px
+		@include breakpoint(max-width 60em)
+			position: absolute
+			z-index: 100
+			top: 60px
+			width: 100%
+			left: 0
+			padding: 10px 20px
+			background: $orange
+		ul li
+			float: left
+			margin-right: 20px
+		ul li:last-child
+			margin-right: 0
+	.nav-options
+		position: absolute
+		right: 0
+		.nav-options-new-quest, .nav-options-user-profile, .nav-options-search
+			float: right
+		.nav-options-user-profile
+			width: 40px
+			img
+				width: 40px
+				// make the image cirular
+				@include border-radius(20px)
+		.nav-options-search
+			button
+				@include clearButton(20px)
+			button:hover
+				@include clearButtonHover()
+		.nav-options-new-quest
+			button
+				@include clearButton(10px)
+			button:hover
+				@include clearButtonHover()
