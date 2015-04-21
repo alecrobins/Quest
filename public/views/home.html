@@ -9,12 +9,20 @@
 					<div class="profile">
 
 							<div class="profile-image">
-								 <img ng-src="{{p.user.profileImage.url}}" alt="Description" />
+								<a href="#" ng-click="queryUser(p.user.id)">
+									 <img ng-src="{{p.user.profileImage.url}}" alt="Description" />
+								</a>
 							</div>
 
 							<div class="profile-user">
-								<h5 class="red"><a href="#" ng-click="queryUser(p.user.id)">{{p.user.username}}</a></h5>
+								<h5 class="red">
+									<a href="#" ng-click="queryUser(p.user.id)">
+										{{p.user.username}}
+									</a>
+								</h5>
+
 								<p class="detail small">{{p.date}}</p>
+
 							</div>
 
 					</div>
@@ -46,30 +54,38 @@
 
 				</div><!-- END POST CARD HEADER -->
 
-				<!-- TODO: add a function getPostContent(post) to return the relevant post information --> 
+				<!-- TODO: add a function getPostContent(post) to return the relevant post information -->
 				<div class="post-card-feature-image"> <!-- back-img="{{post.feature-image.url}}" > -->
 					<img ng-src="{{p.featureImage.url}}" alt="Description" class="repsonsive-image" />
 
 				</div>
 
 				<div class="post-card-title">
-					<h2>{{p.title}}</h2>
+					<h2><a href="#" ng-click="goToPost(p.id)">{{p.title}}</a></h2>
 				</div>
 
 				<div class="post-card-text">
-					<p class="text home ellipsis-paragraph">
+					<p class="text home"> <!-- ellipsis-paragraph"> -->
 						{{p.excerpt}}
 					</p>
 				</div>
 
+				<!-- Post-card footer-->
 				<div class="post-card-footer">
 
-					<div class="continue-reading">
+					<div class="post-card-continue-reading">
 						<p class="detail big red"><a ng-href="{{p.url}}">Continue Reading</a></p>
 					</div>
 
-					<div class="likes">
-						<p class="detail small">{{p.likes}} Travlers like this </p>
+					<div class="post-card-likes">
+
+						<div class="post-card-likes-content">
+							<span class="like-small-selected"></span>
+							<p class="detail small">Travlers like this </p>
+							<h5 class="red thin">{{p.likes}}</h5>
+
+						</div>
+
 					</div>
 
 				</div>

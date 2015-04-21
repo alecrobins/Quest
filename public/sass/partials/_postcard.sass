@@ -41,7 +41,22 @@
 					float: right
 	.post-card-text p
 		width: 100%
-
-.profile-image img
-	@include border-radius(5px, 5px)
+	.post-card-feature-image
+		line-height: 0
+	.post-card-title
+		margin-top: 20px
+	.post-card-footer
+		@include container()
+		.post-card-continue-reading
+			@include span(5 of 12)
+		.post-card-likes
+			@include span(5 of 12 last)
+			.post-card-likes-content
+				.like-small-selected, .detail, h5
+					float: right
+					margin-left: 5px
+.profile-image a
 	vertical-align: top
+	display: inherit
+	img
+		@include border-radius(5px, 5px)
