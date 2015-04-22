@@ -1227,3 +1227,8 @@ head:hover ~ .post-card .post-card-footer:before, head:hover ~ body .post-card .
 .editor-option-extra:first-child td:last-child {
   padding-top: 0px !important;
 }
+
+*:active, *:focus {
+  border: none;
+  outline: none;
+}
