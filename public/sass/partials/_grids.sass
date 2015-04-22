@@ -37,6 +37,11 @@ html, body
 	@include breakpoint(max-width 60em)
 		display: none
 
+// editor right
+.editor-right
+	@extend .flush-right
+	padding: gutter()
+
 // Sticky elements for the bottom and top
 .stick
 	position: fixed

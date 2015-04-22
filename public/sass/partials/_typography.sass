@@ -28,7 +28,8 @@ $font-reading: 'Lora', serif
 // ================
 
 h1, h2, h3, h4, h5, .detail, .tag, .editor-tab,
-h1 a, h2 a, h3 a, h4 a, h5 a, .detail a, .editor-tab a
+h1 a, h2 a, h3 a, h4 a, h5 a, .detail a, .editor-tab a,
+.editor-type-selected, .editor-type-not-selected
 	font-family: $font-heading
 	color: $main-grey
 	text-decoration: none
@@ -69,10 +70,13 @@ $h5-fz: 12px
 $detail-small-fz: 12px
 $detail-big-fz: 14px
 $tag-fz: 12px
-$editor-tabs-fz: 10px
+$editor-tabs-fz: 12px
 
 $text-article-fz: 20px
 $text-home-fz: 16px
+
+$editor-type-selected-fz: 24px
+$editor-type-not-selected-fz: 24px
 
 // Establishes baseline with Compass.
 @include establish-baseline
@@ -111,6 +115,15 @@ h5
 	&.big
 		@include adjust-font-size-to($detail-big-fz)
 
+// Editor
+.editor-type
+	&-selected
+		@include adjust-font-size-to($editor-type-not-selected-fz)
+		font-weight: 600
+	&-not-selected
+		@include adjust-font-size-to($editor-type-not-selected-fz)
+		font-weight: 400
+
 // // Tag
 // .tag
 // 	@include adjust-font-size-to($tag-fz)
@@ -118,6 +131,12 @@ h5
 // Editor tab
 .editor-tab
 	@include adjust-font-size-to($editor-tabs-fz)
+	@include border-radius(5px)
+	font-weight: 600
+	color: white
+	background: $main-red
+	padding: 2px 5px
+	text-transform: uppercase
 
 // Text
 .text

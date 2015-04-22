@@ -60,7 +60,7 @@ html, body {
   height: 100%;
 }
 
-.flush-right {
+.flush-right, .editor-right {
   width: 33.89831%;
   float: right;
   margin-right: 0;
@@ -69,13 +69,17 @@ html, body {
   right: 0;
   overflow: auto;
 }
-.flush-right.light-grey {
+.flush-right.light-grey, .light-grey.editor-right {
   background: #f3f3f3;
 }
 @media (max-width: 60em) {
-  .flush-right {
+  .flush-right, .editor-right {
     display: none;
   }
+}
+
+.editor-right {
+  padding: 1.69492%;
 }
 
 .stick {
@@ -742,29 +746,38 @@ head:hover ~ .container:before, head:hover ~ body .container:before {
 }
 
 h1, h2, h3, h4, h5, .detail, .tag, .editor-tab,
-h1 a, h2 a, h3 a, h4 a, h5 a, .detail a, .editor-tab a {
+h1 a, h2 a, h3 a, h4 a, h5 a, .detail a, .editor-tab a,
+.editor-type-selected, .editor-type-not-selected {
   font-family: "Open Sans", sans-serif;
   color: #3c3c3c;
   text-decoration: none;
 }
 h1.red, h1.red a, h2.red, h2.red a, h3.red, h3.red a, h4.red, h4.red a, h5.red, h5.red a, .detail.red, .detail.red a, .tag.red, .tag.red a, .editor-tab.red, .editor-tab.red a,
 h1 a.red,
-h1 a.red a, h2 a.red, h2 a.red a, h3 a.red, h3 a.red a, h4 a.red, h4 a.red a, h5 a.red, h5 a.red a, .detail a.red, .detail a.red a, .editor-tab a.red, .editor-tab a.red a {
+h1 a.red a, h2 a.red, h2 a.red a, h3 a.red, h3 a.red a, h4 a.red, h4 a.red a, h5 a.red, h5 a.red a, .detail a.red, .detail a.red a, .editor-tab a.red, .editor-tab a.red a,
+.editor-type-selected.red,
+.editor-type-selected.red a, .editor-type-not-selected.red, .editor-type-not-selected.red a {
   color: #ff5252;
 }
 h1.grey, h1.grey a, h2.grey, h2.grey a, h3.grey, h3.grey a, h4.grey, h4.grey a, h5.grey, h5.grey a, .detail.grey, .detail.grey a, .tag.grey, .tag.grey a, .editor-tab.grey, .editor-tab.grey a,
 h1 a.grey,
-h1 a.grey a, h2 a.grey, h2 a.grey a, h3 a.grey, h3 a.grey a, h4 a.grey, h4 a.grey a, h5 a.grey, h5 a.grey a, .detail a.grey, .detail a.grey a, .editor-tab a.grey, .editor-tab a.grey a {
+h1 a.grey a, h2 a.grey, h2 a.grey a, h3 a.grey, h3 a.grey a, h4 a.grey, h4 a.grey a, h5 a.grey, h5 a.grey a, .detail a.grey, .detail a.grey a, .editor-tab a.grey, .editor-tab a.grey a,
+.editor-type-selected.grey,
+.editor-type-selected.grey a, .editor-type-not-selected.grey, .editor-type-not-selected.grey a {
   color: #bcbcbc;
 }
 h1.white, h1.white a, h2.white, h2.white a, h3.white, h3.white a, h4.white, h4.white a, h5.white, h5.white a, .detail.white, .detail.white a, .tag.white, .tag.white a, .editor-tab.white, .editor-tab.white a,
 h1 a.white,
-h1 a.white a, h2 a.white, h2 a.white a, h3 a.white, h3 a.white a, h4 a.white, h4 a.white a, h5 a.white, h5 a.white a, .detail a.white, .detail a.white a, .editor-tab a.white, .editor-tab a.white a {
+h1 a.white a, h2 a.white, h2 a.white a, h3 a.white, h3 a.white a, h4 a.white, h4 a.white a, h5 a.white, h5 a.white a, .detail a.white, .detail a.white a, .editor-tab a.white, .editor-tab a.white a,
+.editor-type-selected.white,
+.editor-type-selected.white a, .editor-type-not-selected.white, .editor-type-not-selected.white a {
   color: white;
 }
 h1.caps, h1.caps a, h2.caps, h2.caps a, h3.caps, h3.caps a, h4.caps, h4.caps a, h5.caps, h5.caps a, .detail.caps, .detail.caps a, .tag.caps, .tag.caps a, .editor-tab.caps, .editor-tab.caps a,
 h1 a.caps,
-h1 a.caps a, h2 a.caps, h2 a.caps a, h3 a.caps, h3 a.caps a, h4 a.caps, h4 a.caps a, h5 a.caps, h5 a.caps a, .detail a.caps, .detail a.caps a, .editor-tab a.caps, .editor-tab a.caps a {
+h1 a.caps a, h2 a.caps, h2 a.caps a, h3 a.caps, h3 a.caps a, h4 a.caps, h4 a.caps a, h5 a.caps, h5 a.caps a, .detail a.caps, .detail a.caps a, .editor-tab a.caps, .editor-tab a.caps a,
+.editor-type-selected.caps,
+.editor-type-selected.caps a, .editor-type-not-selected.caps, .editor-type-not-selected.caps a {
   text-transform: uppercase;
 }
 
@@ -855,9 +868,28 @@ h5.thin {
   line-height: 1.6rem;
 }
 
+.editor-type-selected {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  font-weight: 600;
+}
+.editor-type-not-selected {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  font-weight: 400;
+}
+
 .editor-tab {
-  font-size: 0.5rem;
+  font-size: 0.6rem;
   line-height: 0.8rem;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font-weight: 600;
+  color: white;
+  background: #ff5252;
+  padding: 2px 5px;
+  text-transform: uppercase;
 }
 
 .text.article {
@@ -896,16 +928,13 @@ h5.thin {
     top: 60px;
     width: 100%;
     left: 0;
-    padding: 10px 20px;
+    padding: 10px 0;
     background: #ffc36e;
   }
 }
 .navbar .nav-links ul li {
   float: left;
-  margin-right: 20px;
-}
-.navbar .nav-links ul li:last-child {
-  margin-right: 0;
+  margin-left: 20px;
 }
 .navbar .nav-options {
   position: absolute;
@@ -1140,4 +1169,55 @@ head:hover ~ .post-card .post-card-footer:before, head:hover ~ body .post-card .
   -moz-border-radius: 5px / 5px;
   -webkit-border-radius: 5px 5px;
   border-radius: 5px / 5px;
+}
+
+.editor {
+  padding-top: 20px;
+}
+
+.editor-chapter, .editor-location {
+  margin-bottom: 10px;
+}
+.editor-chapter span, .editor-location span {
+  float: left;
+  margin-right: 10px;
+}
+
+.editor-table {
+  width: 100%;
+}
+.editor-table tr {
+  vertical-align: middle;
+}
+
+.editor-option-type ul li {
+  float: left;
+  display: block;
+  padding-right: 15px;
+  margin-right: 15px;
+  border-right: solid 1px #e6e6e6;
+}
+.editor-option-type ul li:last-child {
+  padding-right: 0;
+  border: none;
+  margin: 0;
+}
+
+.editor-option-style span, .editor-option-image-format span {
+  float: left;
+  margin-right: 15px;
+}
+.editor-option-style span:last-child, .editor-option-image-format span:last-child {
+  margin-right: 0px;
+}
+
+.editor-option-extra td:first-child {
+  vertical-align: bottom;
+}
+.editor-option-extra td:last-child {
+  padding-top: 20px;
+}
+
+.editor-option-extra:first-child td:last-child {
+  padding-top: 0px !important;
 }
