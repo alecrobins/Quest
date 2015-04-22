@@ -148,7 +148,8 @@ head:hover ~ .container-full:before, head:hover ~ body .container-full:before {
   max-width: 1024px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 3.38983%;
+  padding-left: 8.47458%;
+  padding-right: 8.47458%;
 }
 .container:after {
   content: " ";
@@ -1041,6 +1042,8 @@ head:hover ~ .post-card .post-card-header:before, head:hover ~ body .post-card .
   margin-right: 1.69492%;
 }
 .post-card .post-card-header .profile .profile-image {
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   float: left;
   margin-right: 10px;

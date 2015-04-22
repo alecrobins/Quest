@@ -1,29 +1,9 @@
-<h1>Editor</h1>
+<div class="container-left">
+	<div class="container container-post">
+		<h1>Editor</h1>
+	</div>
+</div>
 
-<div>
-
-	<label for="chapter">Chapter</label>
-	<input type="text" name="chapter" id="post-chapter" ng-model="post.chapter" />
-
-	<br />
-
-	<label for="location">Location</label>
-	<input type="text" name="location" id="post-location" ng-model="post.location" />
-
-	<br />
-
-	<label for="title">Title</label>
-	<input type="text" name="title" id="post-title" ng-model="post.title" />
-
-	<br />
-
-	<label for="post-body">Tell your story . . .</label>
-	<textarea name="post-body" id="post-body" ng-model="post.body" cols="30" rows="10"></textarea>
-
-	<br />
-
-	<button ng-click="submit()">Publish</button>
-	<button ng-click="clear()">Clear</button>
-	<button ng-click="delete()">Delete</button>
-
+<div class="flush-right light-grey">
+	<h1>Settings</h1>
 </div>

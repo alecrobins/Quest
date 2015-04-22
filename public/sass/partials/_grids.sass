@@ -54,8 +54,8 @@ html, body
 // Base container to
 .container
 	@include container($max-width)
-	padding: 0 gutter()*2
-	// sidebar margin
+	// one column padding on each side
+	@include pad(1)
 	&.sidebar
 		margin-bottom: gutter() * 3
 	&.navbar
