@@ -940,8 +940,14 @@ h5.thin {
   position: absolute;
   right: 0;
 }
-.navbar .nav-options .nav-options-new-quest, .navbar .nav-options .nav-options-user-profile, .navbar .nav-options .nav-options-search {
-  float: right;
+.navbar .nav-options .nav-options-table {
+  vertical-align: middle;
+}
+.navbar .nav-options .nav-options-table tr {
+  vertical-align: middle;
+}
+.navbar .nav-options .nav-options-table td {
+  margin-left: 20px;
 }
 .navbar .nav-options .nav-options-user-profile {
   width: 40px;

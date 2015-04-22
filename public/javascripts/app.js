@@ -1,5 +1,5 @@
 // Set up Angular app
-angular.module('app', ['ngCookies', 'ngResource', 'ngMessages', 'ngRoute', 'mgcrea.ngStrap'])
+angular.module('app', ['ngCookies', 'ngResource', 'ngMessages', 'ngRoute', 'angular-medium-editor', 'mgcrea.ngStrap'])
   .config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
 
 		// This removes the '#' from the URL

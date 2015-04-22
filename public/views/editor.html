@@ -1,11 +1,11 @@
 <div class="container-left">
-	<div class="container container-post editor">
+	<div class="container container-post editor" >
 
 			<!-- CHAPTER -->
 			<div class="editor-chapter">
 				<span class="icon-chapter-not-selected"></span>
 				<div class="editor-chapter-text">
-					<h5 class="grey">Cambodia Chapter</h5>
+					<h5 class="grey" contenteditable="true">Cambodia Chapter</h5>
 				</div>
 			</div>
 
@@ -13,19 +13,19 @@
 			<div class="editor-location">
 				<span class="icon-location-not-selected"></span>
 				<div class="editor-location-text">
-					<h5 class="grey caps">Where did you go?</h5>
+					<h5 class="grey caps" contenteditable="true">Where did you go?</h5>
 				</div>
 			</div>
 
 			<!-- TITLE -->
 			<div class="editor-title">
-					<h1 class="grey">Amazing title here . . .</h5>
+					<h1 class="grey" medium-editor ng-model="post.test" options='{"placeholder": "Enter a title", "disableToolbar": true, "forcePlainText": true, "disableReturn": true}'>Amazing title here . . .</h5>
 			</div>
 
 			<!-- TEXT -->
 			<div class="editor-body">
 
-				<p class="text big grey">Tell your story . . .</p>
+				<p class="text big grey" contenteditable="true">Tell your story . . .</p>
 
 			</div>
 
