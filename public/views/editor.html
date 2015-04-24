@@ -5,7 +5,7 @@
 			<div class="editor-chapter">
 				<span class="icon-chapter-not-selected"></span>
 				<div class="editor-chapter-text">
-					<h5 class="grey" medium-editor ng-model="post.test" options='{"placeholder": "Enter a title", "disableToolbar": true, "forcePlainText": true, "disableReturn": true}'>Cambodia Chapter</h5>
+					<h5 class="red" ng-model="post.chapter" medium-editor options='{"placeholder": "What chapter?", "disableToolbar": true, "forcePlainText": true, "disableReturn": true}'></h5>
 				</div>
 			</div>
 
@@ -13,20 +13,20 @@
 			<div class="editor-location">
 				<span class="icon-location-not-selected"></span>
 				<div class="editor-location-text">
-					<h5 class="grey caps" medium-editor ng-model="post.test" options='{"placeholder": "Enter a title", "disableToolbar": true, "forcePlainText": true, "disableReturn": true}'>Where did you go?</h5>
+					<h5 class="red caps" medium-editor ng-model="post.location" options='{"placeholder": {{test}}, "disableToolbar": true, "forcePlainText": true, "disableReturn": true}'></h5>
 				</div>
 			</div>
 
 			<!-- TITLE -->
 			<div class="editor-title">
-					<h1 class="grey" medium-editor ng-model="post.test" options='{"placeholder": "Enter a title", "disableToolbar": true, "forcePlainText": true, "disableReturn": true}'></h5>
+					<h1 medium-editor ng-model="post.title" options='{"placeholder": "Amazing title goes here . . .", "disableToolbar": true, "forcePlainText": true, "disableReturn": true}'></h5>
 			</div>
 
 			<!-- TEXT -->
-			<div class="editor-body">
+			<div class="editor-body" medium-editor ng-model="post.content" options='{"placeholder": "A long time ago in a galaxy far, far away . . .", "disableToolbar": true, "forcePlainText": true, "disableReturn": false}'>
 
-				<p class="text big grey" medium-editor ng-model="post.content" options='{"placeholder": "Enter a title", "disableToolbar": true, "forcePlainText": true, "disableReturn": false}'>Tell your story . . .</p>
-
+<!-- 				<p class="text big grey" >Tell your story . . .</p>
+ -->
 			</div>
 
 	</div>

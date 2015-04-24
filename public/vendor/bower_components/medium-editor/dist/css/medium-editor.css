@@ -172,12 +172,13 @@
 .medium-editor-placeholder {
   position: relative; }
   .medium-editor-placeholder:after {
-    position: absolute;
-    top: 0;
-    left: 0;
+    /* position: absolute; */
+    /* top: 0; */
+    /* left: 0; */
     content: attr(data-placeholder) !important;
-    font-style: italic;
-    white-space: pre; }
+    /* font-style: italic; */
+    white-space: pre;
+    }
 
 .medium-editor-dragover {
   background: #ddd; }

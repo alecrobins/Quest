@@ -39,7 +39,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, .detail a, .editor-tab a
 	&:hover
 		text-decoration: underline
 
-.text
+.text, .editor-body p
 	font-family: $font-reading
 	@include styles()
 	// editing styles
@@ -144,6 +144,17 @@ h5
 		@include adjust-font-size-to($text-article-fz)
 	&.home
 		@include adjust-font-size-to($text-home-fz)
+
+// EDITOR
+// ===================
+
+// Overlay editor placeholders with grey
+// Once the user begins editing it will default to it's preferred color
+.medium-editor-placeholder
+	color: $light-grey !important
+
+.editor-body p, .editor-body.medium-editor-placeholder
+	@include adjust-font-size-to($text-article-fz)
 
 // Ellipse
 // .ellipse

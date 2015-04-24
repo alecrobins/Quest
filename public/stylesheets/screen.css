@@ -258,6 +258,11 @@ head:hover ~ .container:before, head:hover ~ body .container:before {
   }
 }
 
+*:focus {
+  border: none;
+  outline: none;
+}
+
 .icons-sprite, .icons-bold-not-selected, .icons-bold-selected, .icons-center-not-selected, .icons-center-selected, .icons-chapter-not-selected, .icons-chapter-selected, .icons-gallery-slide, .icons-gallery-tile, .icons-h1-not-selected, .icons-h1-selected, .icons-h2-not-selected, .icons-h2-selected, .icons-h3-not-selected, .icons-h3-selected, .icons-image-full-inline-not-selected, .icons-image-full-inline-selected, .icons-image-full-not-selected, .icons-image-full-selected, .icons-image-inline-not-selected, .icons-image-inline-selected, .icons-image-left-inline-not-selected, .icons-image-left-inline-selected, .icons-image-left-not-selected, .icons-image-left-selected, .icons-image-top-not-selected, .icons-image-top-selected, .icons-italic-not-selected, .icons-italic-selected, .icons-like-big-not-selected, .icons-like-big-selected, .icons-like-small-not-selected, .icons-like-small-selected, .icons-link-not-selected, .icons-link-selected, .icons-location-not-selected, .icons-location-selected, .icons-map, .icons-quote-not-selected, .icons-quote-selected, .icons-search, .icons-share, .icons-video {
   background-image: url('../assets/images/icons-safa42108ea.png');
   background-repeat: no-repeat;
@@ -785,28 +790,28 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, .detail a:hover, .ed
   text-decoration: underline;
 }
 
-.text {
+.text, .editor-body p {
   font-family: "Lora", serif;
 }
-.text.red, .text.red a {
+.text.red, .text.red a, .editor-body p.red, .editor-body p.red a {
   color: #ff5252;
 }
-.text.grey, .text.grey a {
+.text.grey, .text.grey a, .editor-body p.grey, .editor-body p.grey a {
   color: #bcbcbc;
 }
-.text.white, .text.white a {
+.text.white, .text.white a, .editor-body p.white, .editor-body p.white a {
   color: white;
 }
-.text.caps, .text.caps a {
+.text.caps, .text.caps a, .editor-body p.caps, .editor-body p.caps a {
   text-transform: uppercase;
 }
-.text.italics {
+.text.italics, .editor-body p.italics {
   font-style: italic;
 }
-.text.underline {
+.text.underline, .editor-body p.underline {
   font-style: underline;
 }
-.text.bold {
+.text.bold, .editor-body p.bold {
   font-weight: bold;
 }
 
@@ -898,6 +903,15 @@ h5.thin {
 }
 .text.home {
   font-size: 0.8rem;
+  line-height: 1.6rem;
+}
+
+.medium-editor-placeholder {
+  color: #bcbcbc !important;
+}
+
+.editor-body p, .editor-body.medium-editor-placeholder {
+  font-size: 1rem;
   line-height: 1.6rem;
 }
 
@@ -1226,9 +1240,4 @@ head:hover ~ .post-card .post-card-footer:before, head:hover ~ body .post-card .
 
 .editor-option-extra:first-child td:last-child {
   padding-top: 0px !important;
-}
-
-*:active, *:focus {
-  border: none;
-  outline: none;
 }
