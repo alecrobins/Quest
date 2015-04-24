@@ -897,9 +897,10 @@ h5.thin {
   text-transform: uppercase;
 }
 
-.text.article {
+.text.article, .editor-body p, .editor-body.medium-editor-placeholder {
   font-size: 1rem;
   line-height: 1.6rem;
+  margin-bottom: 20px;
 }
 .text.home {
   font-size: 0.8rem;
@@ -908,11 +909,6 @@ h5.thin {
 
 .medium-editor-placeholder {
   color: #bcbcbc !important;
-}
-
-.editor-body p, .editor-body.medium-editor-placeholder {
-  font-size: 1rem;
-  line-height: 1.6rem;
 }
 
 .navbar {
@@ -1133,6 +1129,7 @@ head:hover ~ .post-card .post-card-header:before, head:hover ~ body .post-card .
 }
 .post-card .post-card-title {
   margin-top: 20px;
+  margin-bottom: 10px;
 }
 .post-card .post-card-footer {
   max-width: 100%;
@@ -1198,6 +1195,9 @@ head:hover ~ .post-card .post-card-footer:before, head:hover ~ body .post-card .
 .editor-chapter, .editor-location {
   margin-bottom: 10px;
 }
+.editor-chapter h5, .editor-location h5 {
+  padding-left: 25px;
+}
 .editor-chapter span, .editor-location span {
   float: left;
   margin-right: 10px;
@@ -1240,4 +1240,8 @@ head:hover ~ .post-card .post-card-footer:before, head:hover ~ body .post-card .
 
 .editor-option-extra:first-child td:last-child {
   padding-top: 0px !important;
+}
+
+.editor-title {
+  margin-bottom: 10px;
 }

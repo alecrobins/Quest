@@ -124,10 +124,6 @@ h5
 		@include adjust-font-size-to($editor-type-not-selected-fz)
 		font-weight: 400
 
-// // Tag
-// .tag
-// 	@include adjust-font-size-to($tag-fz)
-
 // Editor tab
 .editor-tab
 	@include adjust-font-size-to($editor-tabs-fz)
@@ -142,6 +138,7 @@ h5
 .text
 	&.article
 		@include adjust-font-size-to($text-article-fz)
+		margin-bottom: 20px
 	&.home
 		@include adjust-font-size-to($text-home-fz)
 
@@ -154,10 +151,4 @@ h5
 	color: $light-grey !important
 
 .editor-body p, .editor-body.medium-editor-placeholder
-	@include adjust-font-size-to($text-article-fz)
-
-// Ellipse
-// .ellipse
-// 	white-space: nowrap
-// 	overflow: hidden
-// 	text-overflow: ellipsis
+	@extend .text.article
